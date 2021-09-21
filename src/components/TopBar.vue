@@ -17,7 +17,7 @@ export default {
   name: "App",
   data(){
     return{
-    links: ["QUEM SOU", "OBJETIVOS", "FORMAS DE TRABALHO"],
+    links: ["QUEM SOU", "FORMAS DE TRABALHO","BLOG"],
     }
   },
 };
