@@ -91,7 +91,7 @@
               order-lg="2"
               order-xl="2"
             >
-              <v-sheet min-height="300" rounded="lg" elevation="4">
+              <v-sheet class="text-center" min-height="300" rounded="lg" elevation="4">
                 <v-img class="red lighten-5 pt-7" src="../assets/img-s1.jpg" :aspect-ratio="16/9" position="center 7%"></v-img>
                 <v-toolbar short color="red lighten-4">
                   <v-toolbar-title class="text-h4 white--text font-weight-light">QUEM SOU :</v-toolbar-title>
@@ -137,15 +137,70 @@
             </v-col>
           </v-row>
         </v-tab-item>
+
         <v-tab-item class="red lighten-4">
           <v-row>
             <v-col sm="12">
-              <v-sheet rounded="lg" min-height="268" elevation="4">
+              <v-sheet class="text-center" rounded="lg" min-height="268" elevation="4">
+                <v-toolbar color="red lighten-3">
+                  <v-spacer></v-spacer>
+                    <v-toolbar-title>OBJETIVOS</v-toolbar-title>
+                  <v-spacer></v-spacer>
+                </v-toolbar>
+                <p class="text-h6 font-weight-light mx-7">Meu objetivo como social media vai além das tradicionais propagandas e vitrines virtuais que estamos acostumados a ver.</p>
+                <p class="text-h6 font-weight-light mx-7">minha responsabilidade é gerenciar as redes sociais de sua empresa:</p>
 
+                 <v-row class="my-5 mx-5">
+                  <v-col sm="4">
+                    <v-hover v-slot="{ hover }">
+                      <v-card class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                        <v-card-title >
+                          <v-spacer></v-spacer>
+                          <p class="text-h4">📝</p>
+                          <v-spacer></v-spacer>
+                        </v-card-title>
+                        <v-card-subtitle>Elaborando estratégias personalizadas.</v-card-subtitle>
+                        <v-card-text></v-card-text>
+                      </v-card>
+                    </v-hover>
+                  </v-col>
+                  
+                  <v-col sm="4">
+                    <v-hover v-slot="{ hover }">
+                      <v-card  class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                        <v-card-title>
+                          <v-spacer></v-spacer>
+                          <p class="text-h4">📚</p>
+                          <v-spacer></v-spacer>
+                        </v-card-title>
+                        <v-card-subtitle>Criando conteúdos relevantes e autênticos.</v-card-subtitle>
+                        <v-card-text></v-card-text>
+                      </v-card>
+                    </v-hover>
+                  </v-col>
+
+                  <v-col sm="4">
+                    <v-hover v-slot="{ hover }">
+                      <v-card class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                        <v-card-title>
+                          <v-spacer></v-spacer>
+                          <p class="text-h4">📊</p>
+                          <v-spacer></v-spacer>
+                        </v-card-title>
+                        <v-card-subtitle>Acompanhando de perto todos os resultados  e métricas das mídias.</v-card-subtitle>
+                        <v-card-text></v-card-text>
+                      </v-card>
+                    </v-hover>
+                  </v-col>
+
+                </v-row>
+
+                <p class="text-body-1 font-weight-normal mx-7">Aumentando assim sua visibilidade no mercado, se destacando entre os concorrentes e também modernizando  a experiência do cliente na sua empresa, seja ela on-line ou física, atraindo cada vez mais clientes para o seu negócio.</p>
               </v-sheet>
             </v-col>
           </v-row>
         </v-tab-item>
+
         <v-tab-item class="red lighten-4">
           <v-row>
             <v-col sm="12" >
@@ -158,10 +213,10 @@
                 </v-toolbar>
                 
                 <v-row class="my-5 mx-5">
-                  
                   <v-col sm="4">
-                      <v-card class="text-center" rounded="lg" elevation="4">
-                        <v-card-title>
+                    <v-hover v-slot="{ hover }">
+                      <v-card class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                        <v-card-title >
                           <v-spacer></v-spacer>
                           <v-icon size="40">mdi-search-web</v-icon>
                           <v-spacer></v-spacer>
@@ -169,10 +224,12 @@
                         <v-card-subtitle>Tráfego Pago</v-card-subtitle>
                         <v-card-text>Nossa proposta é ajuda-lo a disbrituir seu produto ou serviços para o perfil correto de quem tem interesse na compra.</v-card-text>
                       </v-card>
+                    </v-hover>
                   </v-col>
-
+                  
                   <v-col sm="4">
-                      <v-card class="text-center" rounded="lg" elevation="4">
+                    <v-hover v-slot="{ hover }">
+                      <v-card  class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
                         <v-card-title>
                           <v-spacer></v-spacer>
                           <v-icon size="40">mdi-lan</v-icon>
@@ -181,10 +238,12 @@
                         <v-card-subtitle>Otimização de Sites (SEO)</v-card-subtitle>
                         <v-card-text>Utilizamos técnicas de SEO para melhorar o rankeamento do seu websites ou loja online dentro do google.</v-card-text>
                       </v-card>
+                    </v-hover>
                   </v-col>
 
                   <v-col sm="4">
-                      <v-card class="text-center" rounded="lg" elevation="4">
+                    <v-hover v-slot="{ hover }">
+                      <v-card class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
                         <v-card-title>
                           <v-spacer></v-spacer>
                           <v-icon size="40">mdi-pencil</v-icon>
@@ -193,6 +252,7 @@
                         <v-card-subtitle>Criação e Design</v-card-subtitle>
                         <v-card-text>Criação de materiais como logotipo, identidade visual, catálogo, portfólio, folder, apresentação, anúncios.</v-card-text>
                       </v-card>
+                    </v-hover>
                   </v-col>
 
                 </v-row>
@@ -211,7 +271,10 @@ export default {
   name: "Home",
   components: {},
   data() {
-    return {};
+    return {
+      cardC:'red lighten-3',
+      transparent: 'rgba(255, 255, 255, 0)',
+    };
   },
 };
 </script>
@@ -223,4 +286,12 @@ export default {
 #btn:hover {
   color: rgb(255, 182, 182);
 }
+.v-card {
+  transition: opacity .4s ease-in-out;
+}
+.v-card:not(.on-hover) {
+  opacity: 0.6;
+ }
+
+
 </style>
