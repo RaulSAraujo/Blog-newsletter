@@ -240,13 +240,29 @@
                   >
                     <v-hover v-slot="{ hover }">
                       <v-card max-height="250" min-height="200" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
-                        <v-card-title >
+                        <v-card-title class="mb-2">
                           <v-spacer></v-spacer>
                           <v-img max-width="40" src="../assets/icons/ads_1_.png"></v-img>
                           <v-spacer></v-spacer>
                         </v-card-title>
                         <v-card-subtitle>Gestão de Anúncios</v-card-subtitle>
-                        <v-card-text>Realizamos a gestão de tráfego da sua empresa de forma estratégica para maximizar retorno sobre o investimento (ROI) de campanhas e ações.</v-card-text>
+                        <v-card-text>Realizamos e planejamos a gestão de tráfego da sua empresa de forma estratégica para otimizar o retorno de clientes e obter um melhor desempenho.</v-card-text>
+                        <v-card-actions class="my-n4">
+                          <v-spacer></v-spacer>
+                          <v-chip class="mx-2" color="green" label text-color="white">
+                            <v-icon size="20" left>mdi-google-ads</v-icon>
+                            Google Ads
+                          </v-chip>
+                          <v-chip class="mx-2" color="pink" label text-color="white">
+                            <v-icon size="20" left>mdi-instagram</v-icon>
+                            Instagram Ads
+                          </v-chip>
+                          <v-chip class="mx-2" color="blue" label text-color="white">
+                            <v-icon size="20" left>mdi-facebook</v-icon>
+                            Facebook Ads
+                          </v-chip>
+                          <v-spacer></v-spacer>
+                        </v-card-actions>
                       </v-card>
                     </v-hover>
                   </v-col>
@@ -286,13 +302,13 @@
                   >
                     <v-hover v-slot="{ hover }">
                       <v-card max-height="250" min-height="200" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
-                        <v-card-title>
+                        <v-card-title class="mb-2">
                           <v-spacer></v-spacer>
                           <v-img max-width="40" src="../assets/icons/like_1_.png"></v-img>
                           <v-spacer></v-spacer>
                         </v-card-title>
                         <v-card-subtitle>Gestão de mídias sociais</v-card-subtitle>
-                        <v-card-text>Trabalhamos com foco na persona e usamos estratégias de conteúdo baseadas em análise de dados para gerar mais engajamento e relevância, construindo uma base engajada.</v-card-text>
+                        <v-card-text>Trabalhamos com foco na persona, colocando em ação as ferramentas que mais usamos em nosso cotidiano, para aproximar seus clientes.</v-card-text>
                       </v-card>
                     </v-hover>
                   </v-col>
@@ -311,13 +327,13 @@
                   >
                     <v-hover v-slot="{ hover }">
                       <v-card max-height="250" min-height="200" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
-                        <v-card-title >
+                        <v-card-title class="mb-2">
                           <v-spacer></v-spacer>
                           <v-img max-width="40" src="../assets/icons/esx.png"></v-img>
                           <v-spacer></v-spacer>
                         </v-card-title>
                         <v-card-subtitle>Elaboração de relatórios</v-card-subtitle>
-                        <v-card-text>Realização de planilhas para controle de metricas e estruturação de novas estratégias</v-card-text>
+                        <v-card-text>Elaboramos planilhas e relatórios para controle de métricas e estruturação de novos métodos, estipulando novas táticas e objetivos</v-card-text>
                       </v-card>
                     </v-hover>
                   </v-col>
@@ -334,13 +350,13 @@
                   >
                     <v-hover v-slot="{ hover }">
                       <v-card max-height="250" min-height="200" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
-                        <v-card-title>
+                        <v-card-title class="mb-2">
                           <v-spacer></v-spacer>
                           <v-img max-width="40" src="../assets/icons/networking.png"></v-img>
                           <v-spacer></v-spacer>
                         </v-card-title>
                         <v-card-subtitle>Sistema de atendimento ao cliente</v-card-subtitle>
-                        <v-card-text>Utilizamos técnicas de SEO para melhorar o rankeamento do seu websites ou loja online dentro do google.</v-card-text>
+                        <v-card-text>Prezamos por relacionamentos verdadeiros e experiências inesquecíveis, para que isso se torne possível implementamos um atendimento personalizado e de exelente qualidade.</v-card-text>
                       </v-card>
                     </v-hover>
                   </v-col>
@@ -356,14 +372,34 @@
                   order-xl="3"
                   >
                     <v-hover v-slot="{ hover }">
-                      <v-card max-height="250" min-height="200" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
-                        <v-card-title>
+                      <v-card max-height="350" min-height="300" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                        <v-card-title class="mb-2">
                           <v-spacer></v-spacer>
                           <v-img max-width="40" src="../assets/icons/estrategia.png"></v-img>
                           <v-spacer></v-spacer>
                         </v-card-title>
                         <v-card-subtitle>Estrategia de conteudo</v-card-subtitle>
-                        <v-card-text>Trabalhamos com foco na persona e usamos estratégias de conteúdo baseadas em análise de dados para gerar mais engajamento e relevância, construindo uma base engajada.</v-card-text>
+                        <v-card-text>Um forte aliado que usamos ao nosso favor, desenvolvendo conteúdos autênticos e relevantes baseado em analise de dados para gerar mais engajamento e elevar sua influência no meio digital.</v-card-text>
+                        <v-card-actions>
+                          <v-spacer></v-spacer>
+                          <v-chip pill class="mx-2" color="green" label text-color="white">
+                            Conteudos autênticos
+                          </v-chip>
+                          <v-chip pill class="mx-2" color="pink" label text-color="white">
+                            Planejamento de horarios
+                          </v-chip>
+                          <v-spacer></v-spacer>
+                        </v-card-actions>
+                        <v-card-actions>
+                          <v-spacer></v-spacer>
+                          <v-chip pill class="mx-2" color="blue" label text-color="white">
+                            Relatorio de "TRENDS"
+                          </v-chip>
+                          <v-chip pill class="mx-2" color="blue" label text-color="white">
+                            Linguagem personalizada
+                          </v-chip>
+                          <v-spacer></v-spacer>
+                        </v-card-actions>
                       </v-card>
                     </v-hover>
                   </v-col>
