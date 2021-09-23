@@ -1,6 +1,6 @@
 <template>
     <v-app-bar min-height="60" app flat>
-      <img src="../assets/logo.png" alt="Logo" width="110" />
+      <img src="../assets/Logo-Versão_2.0.png" alt="Logo" width="100" />
 
       <v-tabs centered v-model="$store.state.tab" class="ml-n9" color="red lighten-3">
         <v-tabs-slider color="red lighten-3"></v-tabs-slider>

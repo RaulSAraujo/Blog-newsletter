@@ -137,12 +137,12 @@
             </v-col>
           </v-row>
         </v-tab-item>
-
+        
         <v-tab-item class="red lighten-4">
           <v-row>
             <v-col sm="12" >
               <v-sheet class="text-center"  rounded="lg" min-height="268" elevation="4">
-                <v-toolbar color="red lighten-3">
+                <v-toolbar :style="{ backgroundImage: createBackgroundString1 }">
                   <v-spacer></v-spacer>
                     <v-toolbar-title class="white--text">OBJETIVOS</v-toolbar-title>
                   <v-spacer></v-spacer>
@@ -160,8 +160,7 @@
                   order-lg="1"
                   order-xl="1"
                   >
-                    <v-hover v-slot="{ hover }">
-                      <v-card max-height="350" min-height="250" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                      <v-card max-height="350" min-height="250" class="text-center" rounded="lg">
                         <v-card-title >
                           <v-spacer></v-spacer>
                           <p class="text-h4">📝</p>
@@ -170,7 +169,6 @@
                         <v-card-subtitle>Elaborando estratégias personalizadas.</v-card-subtitle>
                         <v-card-text>É uma abordagem de Marketing focada em traçar estratégias específicas para o seu próprio negócio, buscando resultados em curto, médio e longo prazo. É essencial, pois ajuda a entender o seu público-alvo e acaba gerando resultados mais assertivos e eficazes, ou seja, mais conversões com menos esforço.</v-card-text>
                       </v-card>
-                    </v-hover>
                   </v-col>
                   
                   <v-col 
@@ -183,8 +181,7 @@
                   order-lg="2"
                   order-xl="2"
                   >
-                    <v-hover v-slot="{ hover }">
-                      <v-card max-height="350" min-height="250" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                      <v-card max-height="350" min-height="250" class="text-center" rounded="lg">
                         <v-card-title>
                           <v-spacer></v-spacer>
                           <p class="text-h4">📚</p>
@@ -193,7 +190,6 @@
                         <v-card-subtitle>Criando conteúdos relevantes e autênticos.</v-card-subtitle>
                         <v-card-text>O princípio de conteúdo autêntico é aquele que tem produção própria, que trabalha em cima do discurso que adota e expõe para o seu público. Esse tipo de conteúdo criado pelo influenciador digital deve imprimir o seu olhar sobre determinada categoria.</v-card-text>
                       </v-card>
-                    </v-hover>
                   </v-col>
 
                   <v-col 
@@ -206,8 +202,7 @@
                   order-lg="3"
                   order-xl="3"
                   >
-                    <v-hover v-slot="{ hover }">
-                      <v-card max-height="350" min-height="250" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                      <v-card max-height="350" min-height="250" class="text-center" rounded="lg">
                         <v-card-title>
                           <v-spacer></v-spacer>
                           <p class="text-h4">📊</p>
@@ -216,12 +211,11 @@
                         <v-card-subtitle>Acompanhando de perto todos os resultados  e métricas das mídias.</v-card-subtitle>
                         <v-card-text>Mensurar a qualidade do conteúdo da mensagem, adequação dos meios de comunicação utilizados, aderência dos objetivos de comunicação previstos e qualidade na execução,quantidade de pessoas atingidas pela mensagem, resultados de pesquisa online.</v-card-text>
                       </v-card>
-                    </v-hover>
                   </v-col>
                 </v-row>
                 <p class="text-body-1 font-weight-regular mx-7">Aumentando assim sua visibilidade no mercado, se destacando entre os concorrentes e também modernizando  a experiência do cliente na sua empresa, seja ela on-line ou física, atraindo cada vez mais clientes para o seu negócio.</p>
 
-                <v-toolbar color="red lighten-3">
+                <v-toolbar :style="{ backgroundImage: createBackgroundString1 }">
                   <v-spacer></v-spacer>
                     <v-toolbar-title class="white--text">ESTRATÉGIAS</v-toolbar-title>
                   <v-spacer></v-spacer>
@@ -238,8 +232,7 @@
                   order-lg="1"
                   order-xl="1"
                   >
-                    <v-hover v-slot="{ hover }">
-                      <v-card max-height="250" min-height="200" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                      <v-card max-height="250" min-height="200" class="text-center" rounded="lg">
                         <v-card-title class="mb-2">
                           <v-spacer></v-spacer>
                           <v-img max-width="40" src="../assets/icons/ads_1_.png"></v-img>
@@ -249,22 +242,21 @@
                         <v-card-text>Realizamos e planejamos a gestão de tráfego da sua empresa de forma estratégica para otimizar o retorno de clientes e obter um melhor desempenho.</v-card-text>
                         <v-card-actions class="my-n4">
                           <v-spacer></v-spacer>
-                          <v-chip class="mx-2" color="green" label text-color="white">
-                            <v-icon size="20" left>mdi-google-ads</v-icon>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            <v-icon color="white" size="20" left>mdi-google-ads</v-icon>
                             Google Ads
                           </v-chip>
-                          <v-chip class="mx-2" color="pink" label text-color="white">
-                            <v-icon size="20" left>mdi-instagram</v-icon>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            <v-icon color="white" size="20" left>mdi-instagram</v-icon>
                             Instagram Ads
                           </v-chip>
-                          <v-chip class="mx-2" color="blue" label text-color="white">
-                            <v-icon size="20" left>mdi-facebook</v-icon>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            <v-icon color="white" size="20" left>mdi-facebook</v-icon>
                             Facebook Ads
                           </v-chip>
                           <v-spacer></v-spacer>
                         </v-card-actions>
                       </v-card>
-                    </v-hover>
                   </v-col>
                   
                   <v-col
@@ -277,8 +269,7 @@
                   order-lg="2"
                   order-xl="2"
                   >
-                    <v-hover v-slot="{ hover }">
-                      <v-card max-height="250" min-height="200" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                      <v-card max-height="250" min-height="200" class="text-center" rounded="lg">
                         <v-card-title>
                           <v-spacer></v-spacer>
                           <v-img max-width="40" src="../assets/icons/simbolo-de-pesquisa-seo.png"></v-img>
@@ -286,8 +277,20 @@
                         </v-card-title>
                         <v-card-subtitle>Otimização de Sites (SEO)</v-card-subtitle>
                         <v-card-text>Utilizamos técnicas de SEO para melhorar o rankeamento do seu websites ou loja online dentro do google.</v-card-text>
+                        <v-card-actions class="my-n4">
+                          <v-spacer></v-spacer>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Ferramenta de buscas
+                          </v-chip>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Palavras chaves
+                          </v-chip>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            URLs facilitadas
+                          </v-chip>
+                          <v-spacer></v-spacer>
+                        </v-card-actions>
                       </v-card>
-                    </v-hover>
                   </v-col>
 
                   <v-col 
@@ -300,8 +303,7 @@
                   order-lg="3"
                   order-xl="3"
                   >
-                    <v-hover v-slot="{ hover }">
-                      <v-card max-height="250" min-height="200" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                      <v-card max-height="250" min-height="200" class="text-center" rounded="lg">
                         <v-card-title class="mb-2">
                           <v-spacer></v-spacer>
                           <v-img max-width="40" src="../assets/icons/like_1_.png"></v-img>
@@ -309,8 +311,20 @@
                         </v-card-title>
                         <v-card-subtitle>Gestão de mídias sociais</v-card-subtitle>
                         <v-card-text>Trabalhamos com foco na persona, colocando em ação as ferramentas que mais usamos em nosso cotidiano, para aproximar seus clientes.</v-card-text>
+                        <v-card-actions class="my-n4">
+                          <v-spacer></v-spacer>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Público alvo
+                          </v-chip>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Conexão com os seguidores
+                          </v-chip>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Linguagem personalizada
+                          </v-chip>
+                          <v-spacer></v-spacer>
+                        </v-card-actions>
                       </v-card>
-                    </v-hover>
                   </v-col>
                 </v-row>
 
@@ -325,8 +339,7 @@
                   order-lg="1"
                   order-xl="1"
                   >
-                    <v-hover v-slot="{ hover }">
-                      <v-card max-height="250" min-height="200" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                      <v-card max-height="250" min-height="200" class="text-center" rounded="lg">
                         <v-card-title class="mb-2">
                           <v-spacer></v-spacer>
                           <v-img max-width="40" src="../assets/icons/esx.png"></v-img>
@@ -334,8 +347,23 @@
                         </v-card-title>
                         <v-card-subtitle>Elaboração de relatórios</v-card-subtitle>
                         <v-card-text>Elaboramos planilhas e relatórios para controle de métricas e estruturação de novos métodos, estipulando novas táticas e objetivos</v-card-text>
+                        <v-card-actions class="my-n4">
+                          <v-spacer></v-spacer>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Resumo de vendas
+                          </v-chip>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Dados e analises
+                          </v-chip>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            insights
+                          </v-chip>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Planilhas em excel
+                          </v-chip>
+                          <v-spacer></v-spacer>
+                        </v-card-actions>
                       </v-card>
-                    </v-hover>
                   </v-col>
                   
                   <v-col 
@@ -348,7 +376,6 @@
                   order-lg="2"
                   order-xl="2"
                   >
-                    <v-hover v-slot="{ hover }">
                       <v-card max-height="250" min-height="200" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
                         <v-card-title class="mb-2">
                           <v-spacer></v-spacer>
@@ -357,8 +384,21 @@
                         </v-card-title>
                         <v-card-subtitle>Sistema de atendimento ao cliente</v-card-subtitle>
                         <v-card-text>Prezamos por relacionamentos verdadeiros e experiências inesquecíveis, para que isso se torne possível implementamos um atendimento personalizado e de exelente qualidade.</v-card-text>
+                        <v-card-actions>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Atendimento humanizado
+                          </v-chip>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Transparência
+                          </v-chip>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Dúvidas
+                          </v-chip>
+                          <v-chip small class="mx-2" :style="{ backgroundImage: createBackgroundString }" label text-color="white">
+                            Solução de problemas
+                          </v-chip>
+                        </v-card-actions>
                       </v-card>
-                    </v-hover>
                   </v-col>
 
                   <v-col 
@@ -371,7 +411,6 @@
                   order-lg="3"
                   order-xl="3"
                   >
-                    <v-hover v-slot="{ hover }">
                       <v-card max-height="350" min-height="300" class="text-center" rounded="lg" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
                         <v-card-title class="mb-2">
                           <v-spacer></v-spacer>
@@ -380,28 +419,22 @@
                         </v-card-title>
                         <v-card-subtitle>Estrategia de conteudo</v-card-subtitle>
                         <v-card-text>Um forte aliado que usamos ao nosso favor, desenvolvendo conteúdos autênticos e relevantes baseado em analise de dados para gerar mais engajamento e elevar sua influência no meio digital.</v-card-text>
-                        <v-card-actions>
-                          <v-spacer></v-spacer>
-                          <v-chip pill class="mx-2" color="green" label text-color="white">
-                            Conteudos autênticos
+                        <v-card-actions class="mx-n5">
+                          <v-chip :style="{ backgroundImage: createBackgroundString }" small class="ml-1" label text-color="white">
+                            Organização de conteudo
                           </v-chip>
-                          <v-chip pill class="mx-2" color="pink" label text-color="white">
-                            Planejamento de horarios
+                          <v-chip :style="{ backgroundImage: createBackgroundString }" small class="ml-1" label text-color="white">
+                            Planejamento estratégico
                           </v-chip>
-                          <v-spacer></v-spacer>
-                        </v-card-actions>
-                        <v-card-actions>
-                          <v-spacer></v-spacer>
-                          <v-chip pill class="mx-2" color="blue" label text-color="white">
+                          <v-chip :style="{ backgroundImage: createBackgroundString }" small class="ml-1" label text-color="white">
+                            Agendamento de posts
+                          </v-chip>
+                           <v-chip :style="{ backgroundImage: createBackgroundString }" small class="ml-1" label text-color="white">
                             Relatorio de "TRENDS"
                           </v-chip>
-                          <v-chip pill class="mx-2" color="blue" label text-color="white">
-                            Linguagem personalizada
-                          </v-chip>
-                          <v-spacer></v-spacer>
+                          
                         </v-card-actions>
                       </v-card>
-                    </v-hover>
                   </v-col>
                 </v-row>
                 
@@ -431,10 +464,22 @@ export default {
   components: {},
   data() {
     return {
-      cardC:'red lighten-3',
-      transparent: 'rgba(255, 255, 255, 0)',
+      angle: '25',
+      color1: '#9f9ae4',
+      color2: '#d12d9c',
+      angle1: '0',
+      color3: '#EF9A9A',
+      color4: '#FFCDD2'
     };
   },
+  computed: {
+    createBackgroundString() {
+      return `linear-gradient(${this.angle}deg, ${this.color1}, ${this.color2})`;
+    },
+    createBackgroundString1() {
+      return `linear-gradient(${this.angle1}deg, ${this.color3}, ${this.color4}`;
+    }
+  }
 };
 </script>
 
@@ -445,11 +490,5 @@ export default {
 #btn:hover {
   color: rgb(255, 182, 182);
 }
-.v-card {
-  transition: opacity .4s ease-in-out;
-}
-.v-card:not(.on-hover) {
-  opacity: 0.7;
- }
 
 </style>
