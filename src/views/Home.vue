@@ -346,7 +346,7 @@
                     order-xl="1"
                   >
                     <v-card
-                      max-height="250"
+                      max-height="400"
                       min-height="200"
                       class="text-center"
                       rounded="lg"
@@ -365,8 +365,9 @@
                         empresa de forma estratégica para otimizar o retorno de
                         clientes e obter um melhor desempenho.</v-card-text
                       >
-                      <v-card-actions class="my-n4">
-                        <v-spacer></v-spacer>
+                      <v-card-actions class="ml-n4">
+                        <v-row class="mx-auto">
+                        <v-col cols="12" sm="4" md="12" lg="6" xl="4">
                         <v-chip
                           id="chip"
                           class="mx-2"
@@ -380,8 +381,9 @@
                           >
                           Google Ads
                         </v-chip>
-                        <v-spacer></v-spacer>
-                        <v-chip
+                        </v-col>
+                        <v-col cols="12" sm="4" md="12" lg="6" xl="4">
+                          <v-chip
                           id="chip"
                           class="mx-2"
                           small
@@ -394,8 +396,9 @@
                           >
                           Instagram Ads
                         </v-chip>
-                        <v-spacer></v-spacer>
-                        <v-chip
+                        </v-col>
+                        <v-col cols="12" sm="4" md="12" lg="12" xl="4">
+                          <v-chip
                           id="chip"
                           class="mx-2"
                           small
@@ -408,7 +411,8 @@
                           >
                           Facebook Ads
                         </v-chip>
-                        <v-spacer></v-spacer>
+                        </v-col>
+                      </v-row>
                       </v-card-actions>
                     </v-card>
                   </v-col>
@@ -424,7 +428,7 @@
                     order-xl="2"
                   >
                     <v-card
-                      max-height="300"
+                      max-height="400"
                       min-height="200"
                       class="text-center"
                       rounded="lg"
@@ -445,8 +449,9 @@
                         do seu websites ou loja online dentro do
                         google.</v-card-text
                       >
-                      <v-card-actions class="my-n4">
-                        <v-spacer></v-spacer>
+                      <v-card-actions class="ml-n4">
+                      <v-row class="mx-auto">
+                        <v-col cols="12" sm="4" md="12" lg="6" xl="4">
                         <v-chip
                           id="chip"
                           class="mx-2"
@@ -457,19 +462,21 @@
                         >
                           Ferramenta de buscas
                         </v-chip>
-                        <v-spacer></v-spacer>
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Palavras chaves
-                        </v-chip>
-                        <v-spacer></v-spacer>
-                        <v-chip
+                        </v-col>
+                        <v-col cols="12" sm="4" md="12" lg="6" xl="4">
+                          <v-chip
+                            id="chip"
+                            class="mx-2"
+                            small
+                            :style="{ backgroundImage: createBackgroundString }"
+                            label
+                            text-color="white"
+                          >
+                            Palavras chaves
+                          </v-chip>
+                        </v-col>
+                        <v-col cols="12" sm="4" md="12" lg="12" xl="4">
+                          <v-chip
                           id="chip"
                           class="mx-2"
                           small
@@ -479,7 +486,8 @@
                         >
                           URLs facilitadas
                         </v-chip>
-                        <v-spacer></v-spacer>
+                        </v-col>
+                      </v-row>
                       </v-card-actions>
                     </v-card>
                   </v-col>
@@ -495,7 +503,7 @@
                     order-xl="3"
                   >
                     <v-card
-                      max-height="300"
+                      max-height="400"
                       min-height="200"
                       class="text-center"
                       rounded="lg"
@@ -516,41 +524,42 @@
                         ferramentas que mais usamos em nosso cotidiano, para
                         aproximar seus clientes.</v-card-text
                       >
-                      <v-card-actions class="mt-n6">
-                        <v-spacer></v-spacer>
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Linguagem personalizada
-                        </v-chip>
-                        <v-spacer></v-spacer>
-                        <v-chip
-                          id="chip2"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Público alvo
-                        </v-chip>
-                        <v-spacer></v-spacer>
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Conexão com seguidores
-                        </v-chip>
-                        <v-spacer></v-spacer>
+                      <v-card-actions class="px-1">
+                        <v-row class="mx-auto">
+                          <v-col cols="12" sm="5" md="12" lg="6" xl="4">
+                            <v-chip
+                              id="chip"
+                              small
+                              :style="{ backgroundImage: createBackgroundString }"
+                              label
+                              text-color="white"
+                            >
+                              Linguagem personalizada
+                            </v-chip>
+                            </v-col>
+                            <v-col cols="12" sm="3" md="12" lg="6" xl="4">
+                              <v-chip
+                                id="chip"
+                                small
+                                :style="{ backgroundImage: createBackgroundString }"
+                                label
+                                text-color="white"
+                              >
+                                Público alvo
+                              </v-chip>
+                            </v-col>
+                            <v-col cols="12" sm="4" md="12" lg="12" xl="4">
+                              <v-chip
+                              id="chip"
+                              small
+                              :style="{ backgroundImage: createBackgroundString }"
+                              label
+                              text-color="white"
+                            >
+                              Conexão com seguidores
+                            </v-chip>
+                          </v-col>
+                        </v-row>
                       </v-card-actions>
                     </v-card>
                   </v-col>
@@ -568,7 +577,7 @@
                     order-xl="1"
                   >
                     <v-card
-                      max-height="300"
+                      max-height="500"
                       min-height="200"
                       class="text-center pb-3"
                       rounded="lg"
@@ -589,8 +598,9 @@
                         métricas e estruturação de novos métodos, estipulando
                         novas táticas e objetivos</v-card-text
                       >
-                      <v-card-actions class="mt-n4">
-                        <v-spacer></v-spacer>
+                      <v-card-actions  class="ml-n4">
+                        <v-row class="mx-auto">
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
                         <v-chip
                           id="chip"
                           class="mx-2"
@@ -601,7 +611,8 @@
                         >
                           Resumo de vendas
                         </v-chip>
-                        <v-spacer></v-spacer>
+                        </v-col>
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
                         <v-chip
                           id="chip"
                           class="mx-2"
@@ -612,11 +623,9 @@
                         >
                           Dados e analises
                         </v-chip>
-                        <v-spacer></v-spacer>
-                      </v-card-actions>
-                      <v-card-actions>
-                        <v-spacer></v-spacer>
-                        <v-chip
+                        </v-col>
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                          <v-chip
                           id="chip"
                           class="mx-2"
                           small
@@ -626,8 +635,9 @@
                         >
                           insights
                         </v-chip>
-                        <v-spacer></v-spacer>
-                        <v-chip
+                        </v-col>
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                          <v-chip
                           id="chip"
                           class="mx-2"
                           small
@@ -637,8 +647,10 @@
                         >
                           Planilhas em excel
                         </v-chip>
-                        <v-spacer></v-spacer>
+                        </v-col>
+                      </v-row>
                       </v-card-actions>
+                      
                     </v-card>
                   </v-col>
 
@@ -653,7 +665,7 @@
                     order-xl="2"
                   >
                     <v-card
-                      max-height="300"
+                      max-height="500"
                       min-height="200"
                       class="text-center"
                       rounded="lg"
@@ -675,8 +687,9 @@
                         implementamos um atendimento personalizado e de exelente
                         qualidade.</v-card-text
                       >
-                      <v-card-actions class="mt-n4">
-                        <v-spacer></v-spacer>
+                      <v-card-actions class="ml-n4">
+                      <v-row class="mx-auto">
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
                         <v-chip
                           id="chip"
                           class="mx-2"
@@ -687,7 +700,8 @@
                         >
                           Atendimento humanizado
                         </v-chip>
-                        <v-spacer></v-spacer>
+                        </v-col>
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
                         <v-chip
                           id="chip"
                           class="mx-2"
@@ -698,11 +712,9 @@
                         >
                           Solução de problemas
                         </v-chip>
-                        <v-spacer></v-spacer>
-                      </v-card-actions>
-                      <v-card-actions>
-                        <v-spacer></v-spacer>
-                        <v-chip
+                        </v-col>
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                          <v-chip
                           id="chip"
                           class="mx-2"
                           small
@@ -712,7 +724,8 @@
                         >
                           Dúvidas
                         </v-chip>
-                        <v-spacer></v-spacer>
+                        </v-col>
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
                         <v-chip
                           id="chip"
                           class="mx-2"
@@ -723,7 +736,8 @@
                         >
                           Transparência
                         </v-chip>
-                        <v-spacer></v-spacer>
+                        </v-col>
+                      </v-row>
                       </v-card-actions>
                     </v-card>
                   </v-col>
@@ -739,7 +753,7 @@
                     order-xl="3"
                   >
                     <v-card
-                      max-height="300"
+                      max-height="500"
                       min-height="200"
                       class="text-center"
                       rounded="lg"
@@ -759,8 +773,9 @@
                         em analise de dados para gerar mais engajamento e elevar
                         sua influência no meio digital.</v-card-text
                       >
-                      <v-card-actions class="mt-n4">
-                        <v-spacer></v-spacer>
+                      <v-card-actions class="ml-n4">
+                        <v-row class="mx-auto">
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
                         <v-chip
                           id="chip"
                           class="mx-2"
@@ -771,7 +786,8 @@
                         >
                           Organização de conteudo
                         </v-chip>
-                        <v-spacer></v-spacer>
+                        </v-col>
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
                         <v-chip
                           id="chip"
                           class="mx-2"
@@ -782,11 +798,9 @@
                         >
                           Planejamento estratégico
                         </v-chip>
-                        <v-spacer></v-spacer>
-                      </v-card-actions>
-                      <v-card-actions>
-                        <v-spacer></v-spacer>
-                        <v-chip
+                        </v-col>
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                          <v-chip
                           id="chip"
                           class="mx-2"
                           :style="{ backgroundImage: createBackgroundString }"
@@ -796,7 +810,8 @@
                         >
                           Agendamento de posts
                         </v-chip>
-                        <v-spacer></v-spacer>
+                        </v-col>
+                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
                         <v-chip
                           id="chip"
                           class="mx-2"
@@ -807,7 +822,8 @@
                         >
                           Relatorio de "TRENDS"
                         </v-chip>
-                        <v-spacer></v-spacer>
+                        </v-col>
+                      </v-row>
                       </v-card-actions>
                     </v-card>
                   </v-col>
@@ -871,14 +887,8 @@ export default {
 }
 #chip{
   text-align: center;
-  display: block;
-  padding: auto;
-  width: 50%;
-}
-#chip2{
-  text-align: center;
-  display: block;
-  padding: auto;
-  width: 30%;
+  display: inline-block;
+  padding: 0 auto;
+  width: 100%;
 }
 </style>
