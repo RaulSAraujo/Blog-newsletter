@@ -1,84 +1,130 @@
 <template>
   <v-main class="red lighten-4">
-    <v-container>
+    <v-container fluid>
       <v-tabs-items v-model="$store.state.tab">
         <v-tab-item class="red lighten-4">
           <v-row>
             <v-col
-              sm="6"
-              order-sm="1"
+              class="mt-n3"
               cols="12"
+              sm="12"
+              order-sm="1"
               md="6"
               order-md="1"
               lg="3"
               order-lg="1"
               order-xl="1"
             >
-              <v-sheet rounded="lg" min-height="268" elevation="4">
+              <v-item-group>
                 <v-col>
-                  <v-btn text disabled class="font-weight-bold text-h6"
-                    >REDES SOCIAIS</v-btn
-                  >
+                  <v-sheet rounded="lg" min-height="268" elevation="4">
+                    <v-col>
+                      <v-btn text disabled class="font-weight-bold text-h6"
+                        >REDES SOCIAIS</v-btn
+                      >
+                    </v-col>
+                    <v-col>
+                      <v-btn
+                        width="100%"
+                        id="btn"
+                        text
+                        href="https://www.instagram.com/anajuliarodrigues01/"
+                      >
+                        <v-icon>mdi-instagram</v-icon>
+                        <span class="font-weight-bold text-overline"
+                          >@anajuliarodrigues01</span
+                        >
+                      </v-btn>
+                    </v-col>
+                    <v-col>
+                      <v-btn
+                        width="100%"
+                        id="btn"
+                        text
+                        href="https://www.facebook.com/anajulia.rodriguessilva.79"
+                      >
+                        <v-icon>mdi-facebook</v-icon>
+                        <span class="font-weight-bold text-overline"
+                          >anajulia.rodriguessilva.79</span
+                        >
+                      </v-btn>
+                    </v-col>
+                    <v-col>
+                      <v-btn
+                        width="100%"
+                        id="btn"
+                        text
+                        href="mailto:anajuliarodrigues01@hotmail.com"
+                      >
+                        <v-icon>mdi-email</v-icon>
+                        <span class="font-weight-bold text-overline"
+                          >anajuliarodrigues01@hotmail.com</span
+                        >
+                      </v-btn>
+                    </v-col>
+                    <v-col>
+                      <v-btn width="100%" id="btn" text href="#">
+                        <v-icon>mdi-twitter</v-icon>
+                        <span class="font-weight-bold text-overline"
+                          >@anajuliarodrigues01</span
+                        >
+                      </v-btn>
+                    </v-col>
+                    <v-col>
+                      <v-btn
+                        width="100%"
+                        id="btn"
+                        text
+                        href="http://api.whatsapp.com/send?1=pt_BR&phone=5516990501299"
+                      >
+                        <v-icon>mdi-whatsapp</v-icon>
+                        <span class="font-weight-bold text-overline"
+                          >Whatsapp</span
+                        >
+                      </v-btn>
+                    </v-col>
+                  </v-sheet>
                 </v-col>
-                <v-col>
-                  <v-btn
-                    width="100%"
-                    id="btn"
-                    text
-                    href="https://www.instagram.com/anajuliarodrigues01/"
-                  >
-                    <v-icon>mdi-instagram</v-icon>
-                    <span class="font-weight-bold text-overline"
-                      >@anajuliarodrigues01</span
+
+                <v-col v-if="clientsTestimonialsPages == 4">
+                  <v-sheet rounded="lg" min-height="268" elevation="4">
+                    <v-row
+                      align="center"
+                      justify="center"
+                      no-gutters
+                      class="ma-auto"
                     >
-                  </v-btn>
+                      <v-col
+                        v-for="foto in fotos"
+                        :key="foto"
+                        class="d-flex child-flex"
+                        cols="4"
+                      >
+                        <v-img
+                          :src="foto"
+                          :lazy-src="foto"
+                          aspect-ratio="1"
+                          position="top"
+                          class="grey lighten-2"
+                        >
+                          <template v-slot:placeholder>
+                            <v-row
+                              class="fill-height ma-0"
+                              align="center"
+                              justify="center"
+                            >
+                              <v-progress-circular
+                                indeterminate
+                                color="grey lighten-5"
+                              ></v-progress-circular>
+                            </v-row>
+                          </template>
+                        </v-img>
+                      </v-col>
+                    </v-row>
+                  </v-sheet>
                 </v-col>
-                <v-col>
-                  <v-btn
-                    width="100%"
-                    id="btn"
-                    text
-                    href="https://www.facebook.com/anajulia.rodriguessilva.79"
-                  >
-                    <v-icon>mdi-facebook</v-icon>
-                    <span class="font-weight-bold text-overline"
-                      >anajulia.rodriguessilva.79</span
-                    >
-                  </v-btn>
-                </v-col>
-                <v-col>
-                  <v-btn
-                    width="100%"
-                    id="btn"
-                    text
-                    href="mailto:anajuliarodrigues01@hotmail.com"
-                  >
-                    <v-icon>mdi-email</v-icon>
-                    <span class="font-weight-bold text-overline"
-                      >anajuliarodrigues01@hotmail.com</span
-                    >
-                  </v-btn>
-                </v-col>
-                <v-col>
-                  <v-btn width="100%" id="btn" text href="#">
-                    <v-icon>mdi-twitter</v-icon>
-                    <span class="font-weight-bold text-overline"
-                      >@anajuliarodrigues01</span
-                    >
-                  </v-btn>
-                </v-col>
-                <v-col>
-                  <v-btn
-                    width="100%"
-                    id="btn"
-                    text
-                    href="http://api.whatsapp.com/send?1=pt_BR&phone=5516990501299"
-                  >
-                    <v-icon>mdi-whatsapp</v-icon>
-                    <span class="font-weight-bold text-overline">Whatsapp</span>
-                  </v-btn>
-                </v-col>
-              </v-sheet>
+              </v-item-group>
             </v-col>
 
             <v-col
@@ -135,39 +181,154 @@
             </v-col>
 
             <v-col
-              sm="6"
-              order-sm="2"
+              class="mt-n3"
               cols="12"
+              sm="12"
+              order-sm="2"
               md="6"
               order-md="2"
               lg="3"
-              order-lg="3"
-              order-xl="3"
+              order-lg="2"
+              order-xl="2"
             >
-              <v-sheet
-                rounded="lg"
-                min-height="360"
-                min-width="250"
-                elevation="4"
-              >
+              <v-item-group>
                 <v-col>
-                  <v-btn text disabled class="font-weight-bold text-h5"
-                    >VEJA TAMBEM</v-btn
+                  <v-sheet
+                    rounded="lg"
+                    min-height="360"
+                    min-width="250"
+                    elevation="4"
                   >
+                    <v-col>
+                      <v-btn text disabled class="font-weight-bold text-h5"
+                        >VEJA TAMBEM</v-btn
+                      >
+                    </v-col>
+                    <v-col>
+                      <v-btn
+                        width="100%"
+                        id="btn"
+                        text
+                        href="https://www.instagram.com/brindearteoficial/"
+                      >
+                        <v-icon>mdi-instagram</v-icon>
+                        <span class="font-weight-bold text-overline"
+                          >@brindearteoficial</span
+                        >
+                      </v-btn>
+                    </v-col>
+                  </v-sheet>
                 </v-col>
-                <v-col>
-                  <v-btn
-                    width="100%"
-                    id="btn"
-                    text
-                    href="https://www.instagram.com/brindearteoficial/"
-                  >
-                    <v-icon>mdi-instagram</v-icon>
-                    <span class="font-weight-bold text-overline"
-                      >@brindearteoficial</span
+
+                <v-col v-if="clientsTestimonialsPages == 4">
+                  <v-sheet rounded="lg" min-height="268" elevation="4">
+                    <v-row
+                      align="center"
+                      justify="center"
+                      no-gutters
+                      class="ma-auto"
                     >
-                  </v-btn>
+                      <v-col class="d-flex child-flex mt-2">
+                        <iframe
+                          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fanajulia.rodriguessilva.79%2Fvideos%2F592778045004824%2F&show_text=false&width=267&t=0"
+                          width="267"
+                          height="770"
+                          style="border: none; overflow: hidden"
+                          scrolling="no"
+                          frameborder="0"
+                          allowfullscreen="true"
+                          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        ></iframe>
+                      </v-col>
+                    </v-row>
+                  </v-sheet>
                 </v-col>
+              </v-item-group>
+            </v-col>
+
+            <v-col
+              v-if="clientsTestimonialsPages <= 3"
+              order-sm="5"
+              order-md="5"
+              order-lg="5"
+              order-xl="5"
+            >
+              <v-sheet rounded="lg" min-height="268" elevation="4">
+                <v-row
+                  align="center"
+                  justify="center"
+                  no-gutters
+                  class="ma-auto"
+                >
+                  <v-col
+                    v-for="foto in fotos"
+                    :key="foto"
+                    class="d-flex child-flex"
+                    cols="6"
+                    sm="4"
+                    md="3"
+                    lg="3"
+                  >
+                    <v-img
+                      :src="foto"
+                      :lazy-src="foto"
+                      aspect-ratio="1"
+                      position="top"
+                      class="grey lighten-2"
+                    >
+                      <template v-slot:placeholder>
+                        <v-row
+                          class="fill-height ma-0"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-progress-circular
+                            indeterminate
+                            color="grey lighten-5"
+                          ></v-progress-circular>
+                        </v-row>
+                      </template>
+                    </v-img>
+                  </v-col>
+                </v-row>
+              </v-sheet>
+            </v-col>
+
+            <v-col
+              v-if="clientsTestimonialsPages == 1"
+              order-sm="6"
+              order-md="6"
+              order-lg="6"
+              order-xl="6"
+            >
+              <v-sheet rounded="lg" min-height="268" elevation="4">
+                <v-row
+                  align="center"
+                  justify="center"
+                  no-gutters
+                  class="ma-auto"
+                >
+                  <v-col
+                    cols="12"
+                    sm="12"
+                    md="12"
+                    lg="3"
+                    v-for="video in videos"
+                    :key="video"
+                    class="d-flex child-flex"
+                  >
+                    <iframe
+                      :src="video"
+                      width="100%"
+                      height="840"
+                      style="border: none; overflow: hidden"
+                      scrolling="no"
+                      frameborder="0"
+                      allowfullscreen="true"
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    ></iframe>
+                  </v-col>
+                </v-row>
               </v-sheet>
             </v-col>
           </v-row>
@@ -367,52 +528,58 @@
                       >
                       <v-card-actions class="ml-n4">
                         <v-row class="mx-auto">
-                        <v-col cols="12" sm="4" md="12" lg="6" xl="4">
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          <v-icon color="white" size="20" left
-                            >mdi-google-ads</v-icon
-                          >
-                          Google Ads
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="4" md="12" lg="6" xl="4">
-                          <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          <v-icon color="white" size="20" left
-                            >mdi-instagram</v-icon
-                          >
-                          Instagram Ads
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="4" md="12" lg="12" xl="4">
-                          <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          <v-icon color="white" size="20" left
-                            >mdi-facebook</v-icon
-                          >
-                          Facebook Ads
-                        </v-chip>
-                        </v-col>
-                      </v-row>
+                          <v-col cols="12" sm="4" md="12" lg="6" xl="4">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              <v-icon color="white" size="20" left
+                                >mdi-google-ads</v-icon
+                              >
+                              Google Ads
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="12" lg="6" xl="4">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              <v-icon color="white" size="20" left
+                                >mdi-instagram</v-icon
+                              >
+                              Instagram Ads
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="12" lg="12" xl="4">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              <v-icon color="white" size="20" left
+                                >mdi-facebook</v-icon
+                              >
+                              Facebook Ads
+                            </v-chip>
+                          </v-col>
+                        </v-row>
                       </v-card-actions>
                     </v-card>
                   </v-col>
@@ -450,44 +617,50 @@
                         google.</v-card-text
                       >
                       <v-card-actions class="ml-n4">
-                      <v-row class="mx-auto">
-                        <v-col cols="12" sm="4" md="12" lg="6" xl="4">
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Ferramenta de buscas
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="4" md="12" lg="6" xl="4">
-                          <v-chip
-                            id="chip"
-                            class="mx-2"
-                            small
-                            :style="{ backgroundImage: createBackgroundString }"
-                            label
-                            text-color="white"
-                          >
-                            Palavras chaves
-                          </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="4" md="12" lg="12" xl="4">
-                          <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          URLs facilitadas
-                        </v-chip>
-                        </v-col>
-                      </v-row>
+                        <v-row class="mx-auto">
+                          <v-col cols="12" sm="4" md="12" lg="6" xl="4">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              Ferramenta de buscas
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="12" lg="6" xl="4">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              Palavras chaves
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="12" lg="12" xl="4">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              URLs facilitadas
+                            </v-chip>
+                          </v-col>
+                        </v-row>
                       </v-card-actions>
                     </v-card>
                   </v-col>
@@ -530,29 +703,35 @@
                             <v-chip
                               id="chip"
                               small
-                              :style="{ backgroundImage: createBackgroundString }"
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
                               label
                               text-color="white"
                             >
                               Linguagem personalizada
                             </v-chip>
-                            </v-col>
-                            <v-col cols="12" sm="3" md="12" lg="6" xl="4">
-                              <v-chip
-                                id="chip"
-                                small
-                                :style="{ backgroundImage: createBackgroundString }"
-                                label
-                                text-color="white"
-                              >
-                                Público alvo
-                              </v-chip>
-                            </v-col>
-                            <v-col cols="12" sm="4" md="12" lg="12" xl="4">
-                              <v-chip
+                          </v-col>
+                          <v-col cols="12" sm="3" md="12" lg="6" xl="4">
+                            <v-chip
                               id="chip"
                               small
-                              :style="{ backgroundImage: createBackgroundString }"
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              Público alvo
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="12" lg="12" xl="4">
+                            <v-chip
+                              id="chip"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
                               label
                               text-color="white"
                             >
@@ -598,59 +777,66 @@
                         métricas e estruturação de novos métodos, estipulando
                         novas táticas e objetivos</v-card-text
                       >
-                      <v-card-actions  class="ml-n4">
+                      <v-card-actions class="ml-n4">
                         <v-row class="mx-auto">
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Resumo de vendas
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Dados e analises
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                          <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          insights
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                          <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Planilhas em excel
-                        </v-chip>
-                        </v-col>
-                      </v-row>
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              Resumo de vendas
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              Dados e analises
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              insights
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              Planilhas em excel
+                            </v-chip>
+                          </v-col>
+                        </v-row>
                       </v-card-actions>
-                      
                     </v-card>
                   </v-col>
 
@@ -688,56 +874,64 @@
                         qualidade.</v-card-text
                       >
                       <v-card-actions class="ml-n4">
-                      <v-row class="mx-auto">
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Atendimento humanizado
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Solução de problemas
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                          <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Dúvidas
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          small
-                          :style="{ backgroundImage: createBackgroundString }"
-                          label
-                          text-color="white"
-                        >
-                          Transparência
-                        </v-chip>
-                        </v-col>
-                      </v-row>
+                        <v-row class="mx-auto">
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              Atendimento humanizado
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              Solução de problemas
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              Dúvidas
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              small
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              label
+                              text-color="white"
+                            >
+                              Transparência
+                            </v-chip>
+                          </v-col>
+                        </v-row>
                       </v-card-actions>
                     </v-card>
                   </v-col>
@@ -775,55 +969,63 @@
                       >
                       <v-card-actions class="ml-n4">
                         <v-row class="mx-auto">
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          :style="{ backgroundImage: createBackgroundString }"
-                          small
-                          label
-                          text-color="white"
-                        >
-                          Organização de conteudo
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          :style="{ backgroundImage: createBackgroundString }"
-                          small
-                          label
-                          text-color="white"
-                        >
-                          Planejamento estratégico
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                          <v-chip
-                          id="chip"
-                          class="mx-2"
-                          :style="{ backgroundImage: createBackgroundString }"
-                          small
-                          label
-                          text-color="white"
-                        >
-                          Agendamento de posts
-                        </v-chip>
-                        </v-col>
-                        <v-col cols="12" sm="6" md="12" lg="6" xl="6">
-                        <v-chip
-                          id="chip"
-                          class="mx-2"
-                          :style="{ backgroundImage: createBackgroundString }"
-                          small
-                          label
-                          text-color="white"
-                        >
-                          Relatorio de "TRENDS"
-                        </v-chip>
-                        </v-col>
-                      </v-row>
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              small
+                              label
+                              text-color="white"
+                            >
+                              Organização de conteudo
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              small
+                              label
+                              text-color="white"
+                            >
+                              Planejamento estratégico
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              small
+                              label
+                              text-color="white"
+                            >
+                              Agendamento de posts
+                            </v-chip>
+                          </v-col>
+                          <v-col cols="12" sm="6" md="12" lg="6" xl="6">
+                            <v-chip
+                              id="chip"
+                              class="mx-2"
+                              :style="{
+                                backgroundImage: createBackgroundString,
+                              }"
+                              small
+                              label
+                              text-color="white"
+                            >
+                              Relatorio de "TRENDS"
+                            </v-chip>
+                          </v-col>
+                        </v-row>
                       </v-card-actions>
                     </v-card>
                   </v-col>
@@ -865,6 +1067,23 @@ export default {
       angle1: "0",
       color3: "#EF9A9A",
       color4: "#FFCDD2",
+      clientsTestimonialsPages: 0,
+      fotos: [
+        "https://scontent.frao1-1.fna.fbcdn.net/v/t1.6435-9/60392939_294337464848885_8838573710509080576_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeEQemgW5yskB0GHB4xy9SfEMCuOjghyQpcwK46OCHJCl1z8Zyc2YUE9_FFiawDUW_L9ZOPraAPDvQGr5rXWE6_G&_nc_ohc=zS0enal5T9kAX-cGCZM&tn=ys-wSt6kKdayP6SI&_nc_ht=scontent.frao1-1.fna&oh=5c734d7c3e2d80ebd0b360ab14a293c6&oe=61733A7F",
+        "https://scontent.frao1-2.fna.fbcdn.net/v/t1.6435-9/58373092_1496543293810036_1270141835108417536_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeEup8GZdW2bQ97BNpz-rXJC2UrIECF5X__ZSsgQIXlf_3qv6MeVMMk5Bf1xbqDgvm_ny5_QDRLpa3S-7jjMy2ZN&_nc_ohc=u02ojVMhtV8AX8Parsg&_nc_ht=scontent.frao1-2.fna&oh=38622cb8dabf0def67237eaf25d49571&oe=6172902D",
+        "https://scontent.frao1-2.fna.fbcdn.net/v/t1.6435-9/56334640_263163637966268_5436294343117766656_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeHJVhYvwpCDZ6CUGHEOQWupD2uhkP2o4ssPa6GQ_ajiy03Qbjw7GmZXNMri_gG38-agsi8dikejCJGmXWwPwe2Z&_nc_ohc=aQKA4OaM6qUAX9urmVf&_nc_ht=scontent.frao1-2.fna&oh=749cb3374adc07040a22bab7d54a36b9&oe=6172A4AA",
+        "https://scontent.frao1-1.fna.fbcdn.net/v/t1.6435-9/53264647_333807407488791_7696115390480384000_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeEqzh8y-9Eq91KS1KLGJaROdFyK0OwS7xZ0XIrQ7BLvFnjE3wTA-gE_BSsAbyrjHu11lYD9mkIpMhNarN89YUG_&_nc_ohc=VtS1DvzAhg4AX_Clr6A&_nc_ht=scontent.frao1-1.fna&oh=b788005031ccc6742b65ea8f56aee45f&oe=61738212",
+        "https://scontent.frao1-1.fna.fbcdn.net/v/t1.6435-9/176948704_792935484989078_798200316349910626_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEW0A-YRrFKUrJI-WFNgvwQoRjNccZux7ihGM1xxm7HuHXglHvJs6RhrZHkJFId9WSgMjMTpdWvsrub01hCEF_n&_nc_ohc=_QrJs7rC0CkAX_BSmXh&_nc_ht=scontent.frao1-1.fna&oh=8d67d561b44fd2276ac563d3bc18aeb7&oe=61746DCB",
+        "https://scontent.frao1-1.fna.fbcdn.net/v/t1.6435-9/97450934_553843295564966_6091512224260554752_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=174925&_nc_eui2=AeFB06GL_zZcH8-ObuELoSESDPELg4XeaIgM8QuDhd5oiGsXoavT2sMC88--mQ7kwoY8VI1lsTldYbjdPLUeogqD&_nc_ohc=zCxNOZZDo7cAX_NgU5j&_nc_ht=scontent.frao1-1.fna&oh=97802bf8f2a0a4bb67598774299b735b&oe=61745911",
+        "https://scontent.frao1-1.fna.fbcdn.net/v/t1.6435-9/67460409_342235606725737_1899849478823739392_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=174925&_nc_eui2=AeFL8sinnNzDkCSFyVJuLPsiJ7iW_QPJfWknuJb9A8l9aT3EcAGg-K78leEK6fyrFmwssl_YllOOrWggbzpW3jcB&_nc_ohc=AYCcyg5jrO0AX-Iv63o&_nc_ht=scontent.frao1-1.fna&oh=4b4ade6137fea5f8bfdabc5ad9910356&oe=617312AE",
+        "https://scontent.frao1-1.fna.fbcdn.net/v/t1.6435-9/67079560_334633534152611_2678004519572340736_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_eui2=AeGYV14pLY9SDA9QFakjeYzIMAqWVKlddWgwCpZUqV11aB4gXroHuOn3UW4ilZ2T5G9Pt8NHTdmZrjzXT47fDcVA&_nc_ohc=7M0nIyCefEsAX9nQxy5&_nc_ht=scontent.frao1-1.fna&oh=15723de8f3a36157d9263a105bacfa70&oe=61713D07",
+        "https://scontent.frao1-1.fna.fbcdn.net/v/t1.6435-9/55861128_266652994283999_444034824529772544_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeFNljTiVVtUycptdx5aIMWWul5Cy_AJTdm6XkLL8AlN2c9W44Y0_Ca_LSIGV_NPomMks6RBCH7BkUiwEPHQhzXH&_nc_ohc=oHQTCSLVhcQAX9KotNt&_nc_ht=scontent.frao1-1.fna&oh=fb7bb15f0d43154cc93e396af11fa6eb&oe=61749EF2",
+        "https://scontent.frao1-2.fna.fbcdn.net/v/t1.6435-9/55489183_261559434793355_4692068195387834368_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=19026a&_nc_eui2=AeGcTeiQIxJx1RqGvaMi3kY0_G04iyQfcG_8bTiLJB9wb5RqwP7gM3L-i3tNAyUCvD8nfh5P7-1O6v-urpwwrFR-&_nc_ohc=uIoOBY6493AAX-x4DGw&_nc_ht=scontent.frao1-2.fna&oh=9168acf8fdfb79727ef1dbc213d869a4&oe=6172C6DE",
+      ],
+      videos: [
+        "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fanajulia.rodriguessilva.79%2Fvideos%2F592778045004824%2F&show_text=false&width=267&t=0",
+        "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fanajulia.rodriguessilva.79%2Fvideos%2F486891108926852%2F&show_text=false&width=380&t=0",
+      ],
     };
   },
   computed: {
@@ -874,6 +1093,26 @@ export default {
     createBackgroundString1() {
       return `linear-gradient(${this.angle1}deg, ${this.color3}, ${this.color4}`;
     },
+  },
+  methods: {
+    winWidth: function () {
+      setInterval(() => {
+        var w = window.innerWidth;
+        if (w < 768) {
+          this.clientsTestimonialsPages = 1;
+        } else if (w < 960) {
+          this.clientsTestimonialsPages = 2;
+        } else if (w < 1260) {
+          this.clientsTestimonialsPages = 3;
+        } else {
+          this.clientsTestimonialsPages = 4;
+        }
+      }, 100);
+    },
+  },
+  mounted() {
+    //callback once mounted
+    this.winWidth();
   },
 };
 </script>
@@ -885,7 +1124,7 @@ export default {
 #btn:hover {
   color: rgb(255, 182, 182);
 }
-#chip{
+#chip {
   text-align: center;
   display: inline-block;
   padding: 0 auto;
